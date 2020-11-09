@@ -1111,7 +1111,7 @@ class MainWindow(QMainWindow, WindowMixin):
             basename = os.path.basename(
                 os.path.splitext(filePath)[0])
 
-            filedir = filePath.split(basename)[0].split("/")[-2:-1][0]
+            filedir = filePath.split(basename)[0].split(os.sep)[-2:-1][0]
 
             xmlPath = os.path.join(self.defaultSaveDir, basename + XML_EXT)
             txtPath = os.path.join(self.defaultSaveDir, basename + TXT_EXT)
